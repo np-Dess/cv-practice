@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="katyanov, cv, resume, резюме">
+    <meta name="description" content="Это демо-проект резюме Катьянова М.А.">
+    <title>Демо-проект резюме Катьянова М.А.</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+  </head>
+  <body>
+    <div class="[ wrapper ] [ flex-col ] [ flex-j-between ]">
+    <header class="[ header ] [ flex-col ] [ flex-vh-center ]">
+      <h1 class="header__title">Таблицы</h1>
+      <div class="[ header__subtitle ] [ mt-10 ]">Result School</div>
+    </header>
+    <main class="[ main ] [ flex-row ]">
+      <aside class="sidebar">
+        <div class="[ menu-toggle ] [ flex-row ] [ flex-vh-center ]" onclick="this.classList.toggle('show')">Меню</div>
+        <ul class="sidemenu">
+          <li><a class="sublink" href="index.html">Главная</a></li>
+          <li class="dropdown show" onclick="this.classList.toggle('show')">
+            Задания
+          </li>
+          <div class="sidemenu__dropdown">
+          <div class="sidemenu__subtitle">HTML</div>
+          <ul class="sidemenu__sub">
+            <li><a class="sublink" href="lesson-9.html">7. Работа с текстом</a></li>
+            <li><a class="sublink" href="lesson-10.html">8. Картинки и ссылки</a></li>
+            <li><a class="sublink" href="lesson-11.html">9. Списки</a></li>
+            <li><a class="[ sidemenu__active ] [ sublink ]" href="lesson-12.html">10. Таблицы</a></li>
+            <li><a class="sublink" href="lesson-13.html">11. Формы</a></li>
+          </ul>
+          <div class="sidemenu__subtitle">CSS</div>
+          <ul class="sidemenu__sub">
+            <li><a class="sublink" href="lesson-25.html">8. Границы элементов</a></li>
+            <li><a class="sublink" href="lesson-css.html">X. Прочее</a></li>
+          </ul>
+        </div>
+          <li><a class="sublink" href="contacts.html">Контакты</a></li>
+        </ul>
+      </aside>
+      <div class="content">
+        <div class="[ topbar ] [ flex-row ]">
+        <ul class="[ breadcrumbs ] [ flex-row w-100 ]">
+          <li><a href="index.html" class="sublink">Главная</a></li>
+          <li>10. Таблицы</li>
+        </ul>
+        <div class="[ mode ] [ flex-row ]">
+          <div class="[ mode__icon ]"></div>
+          <input type="checkbox" id="theme" class="mode__theme-toggle" onchange="(() => {localStorage.getItem('theme') === 'dark' ? localStorage.removeItem('theme') : localStorage.setItem('theme', 'dark'); document.body.classList.toggle('dark')})()">
+          <label for="theme" class="[ flex-row ] [ flex-vh-center ]">
+        </div>
+      </div>
+    <div class="[ user-info ] [ flex-row ] [ mt-10 ]">
+    <div class=""><img src="avatar.png"></div>    
+    <div>
+    <h1>Михаил Катьянов</h1>
+    <p>В настоящее время я предприниматель, представляю одноименную веб-студию в концепции «one-man show».</p>     
+    <p>Интересуюсь веб-дизайном, посматриваю сериалы, иногда путешевствую.</p>
+</div>    
+</div>
+<div>
+    <table class="[ table ] [ w-100 mt-30 ]">
+    <thead>
+    <tr>
+        <td>Год</td>
+        <td>Название</td>
+        <td>Должность</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>2005 – 2009</td>
+        <td>Региональные проекты</td>
+        <td>Ньюсмэйкер, контент-менежер</td>
+    </tr>        
+    <tr>
+        <td>2010 – 2016</td>
+        <td>Cafeteria.ru</td>
+        <td>Зам. IT-отдела, вебмастер (др. проекты)</td>
+    </tr>
+    <tr>
+        <td>2017 – сейчас</td>
+        <td>И.П. Катьянов (веб-студия)</td>
+        <td>CEO</td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<h2 class="mt-30 mb-10">Хобби</h2>
+<ul class="list">
+    <li>Веб-дизайн</li>
+    <li>Сериалы</li>
+    <li>Путешевствия</li>
+</ul>
+
+      </div>
+    </main>
+    <footer class="[ footer ] [ flex-row ] [ flex-vh-center ]">
+      © 2022 Katyanov M.A.
+    </footer>
+  </div>
+  <script>if (localStorage.getItem('theme') === 'dark') {document.getElementById('theme').checked = true; document.body.classList.toggle('dark')};</script>
+  </body>
+</html>
