@@ -318,6 +318,10 @@ h3 {
   display: block;
   cursor: pointer;
 }
+.breadcrumbs a:hover,
+.sidemenu a:hover {
+  color: var(--clr-t-bold);
+}
 .sidemenu__active {
   color: var(--clr-t-pale);
 }
@@ -619,6 +623,9 @@ body.dark .contact-form__state[status='success'] {
     border-left: 1px solid var(--bg-border);
     margin-left: 3rem;
     padding: 1.12rem 2rem 1.1rem 1.5rem;
+  }
+  .sidemenu__sub li > a:hover {
+    border-color: var(--clr-t-bold);
   }
   .content {
     max-width: calc(120rem - 27rem);
